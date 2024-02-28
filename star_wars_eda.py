@@ -61,6 +61,10 @@ max_speed_df = max_speed_df.sort_values(by='max_atmosphering_speed', ascending=F
 print("Veículo mas rápido:")
 print(max_speed_df['name'].iloc[0])
 
+
+# verificando os climas dos planetas em busca de algum planeta árido (considerado o clima mais quente)
+print(dataframes['planets'][['name','climate','surface_water']])
+
 # verificando qual classificação de especies que mais aparece
 # nesse caso, contei a quantidade de vezes que cada classificação aparece e joguei em um histograma pra verificar num gráfico
 classification_counts = dataframes['species']['classification'].value_counts()
